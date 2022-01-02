@@ -1,0 +1,19 @@
+{
+  "name": "wassup",
+  "version": "1.0.0",
+  "description": "This is a realtime chat application built by techno mahagyan",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "rakesh-sudo-stacks.github.io"
+  },
+  "author": "Techno Mahagyan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.0"
+  }
+}
