@@ -31,6 +31,15 @@
     }
 }
 
+@media(max-width:548px){
+    html{
+        font-size: 80.5%;
+    }
+    .msg{
+        width: 17rem;
+    }
+}
+
 *{
     margin:0;
     padding: 0;
