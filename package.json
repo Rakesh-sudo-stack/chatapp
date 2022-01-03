@@ -4,7 +4,8 @@
   "description": "This is a realtime chat application built by techno mahagyan",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
   },
   "repository": {
     "type": "git",
