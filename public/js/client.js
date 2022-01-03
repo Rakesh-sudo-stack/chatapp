@@ -3,6 +3,7 @@ const chatArea = document.querySelector('.chat_area');
 const inputValue = document.querySelector('#inputvalue');
 const button = document.querySelector('button');
 const form = document.querySelector('form');
+var ring = new Audio('/img/sound.mp3');
 
 const socket = io();
 
@@ -22,6 +23,7 @@ const appendmsg = (text,type) => {
 socket.emit('new-user',name);
 socket.on('user-joined',(user)=>{
     appendmsg(`<b>${user}</b> joined the chat`,"incoming");
+    ring.play();
 });
 
 button.addEventListener('click',(e)=>{
@@ -35,9 +37,11 @@ button.addEventListener('click',(e)=>{
 
 socket.on('receive',(information)=>{
     appendmsg(`<h4>${information.user}: </h4>${information.message}`,"incoming");
+    ring.play();
 });
 
 socket.on('left',(userleft)=>{
     appendmsg(`<b>${userleft}</b> left the chat`,"incoming")
+    ring.play();
 });
 
